@@ -46,7 +46,6 @@ int main()
                  << "КФ 3/8: J(h) = " << threeEighths(0, a, b) << endl
                  << "Абсолютная фактическая погрешность: |J - J(h)| = " << fabs(J-threeEighths(0, a, b)) << endl
                  <<"------------------------------------------" << endl;
-            cin >> num;
             break;
         case 1:
             cout  << endl << "Работаем с многочленом f(x)=x-4" << endl;
@@ -65,7 +64,6 @@ int main()
                  << "КФ 3/8: J(h) = " << threeEighths(1, a, b) << endl
                  << "Абсолютная фактическая погрешность: |J - J(h)| = " << fabs(J-threeEighths(1, a, b)) << endl
                  <<"------------------------------------------" << endl;
-            cin >> num;
             break;
         case 2:
             cout << endl << "Работаем с многочленом f(x)=3*x^2+4*x-3" << endl;
@@ -84,7 +82,6 @@ int main()
                  << "КФ 3/8: J(h) = " << threeEighths(2, a, b) << endl
                  << "Абсолютная фактическая погрешность: |J - J(h)| = " << fabs(J-threeEighths(2, a, b)) << endl
                  <<"------------------------------------------" << endl;
-            cin >> num;
             break;
         case 3:
             cout << endl << "Работаем с многочленом f(x)=4*x^3-6*x^2+7*x-10" << endl;
@@ -103,7 +100,6 @@ int main()
                  << "КФ 3/8: J(h) = " << threeEighths(3, a, b) << endl
                  << "Абсолютная фактическая погрешность: |J - J(h)| = " << fabs(J-threeEighths(3, a, b)) << endl
                  <<"------------------------------------------" << endl;
-            cin >> num;
             break;
         case 4:
             cout << endl << "Работаем с f(x)=6*x^2+cos(x)*exp(4x)" << endl;
@@ -122,10 +118,16 @@ int main()
                  << "КФ 3/8: J(h) = " << threeEighths(4, a, b) << endl
                  << "Абсолютная фактическая погрешность: |J - J(h)| = " << fabs(J-threeEighths(4, a, b)) << endl
                  <<"------------------------------------------" << endl;
-            cin >> num;
             break;
         case 5:
             return 0;
         }
+        cin >> num;
+        while (num != 0 && num != 1 && num != 2 && num != 3 && num != 4 && num!= 5 && num != 6)
+        {
+            cout << "Введено неверное значение! Повторите попытку.";
+            cin >> num;
+        }
+
     }
 }
